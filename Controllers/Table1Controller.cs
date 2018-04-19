@@ -25,7 +25,7 @@ namespace Assignment2API.Controllers
         [HttpGet]
         public IEnumerable<Table1> Get()
         {
-            return db.Table1.ToList();
+            return db.Table1.OrderBy(a => a.companyname).ToList();
         }
 
         // GET: api/Table1/5
