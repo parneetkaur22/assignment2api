@@ -8,6 +8,10 @@ namespace Assignment2API.Models
 {
     public class Model1 : DbContext
     {
+        public Model1()
+        {
+        }
+
         // constructor
 
         public Model1(DbContextOptions<Model1>options) : base(options)
@@ -16,5 +20,6 @@ namespace Assignment2API.Models
 
         }
 
+        public DbSet<Table1> Table1 { get; set; }
     }
 }
